@@ -37,8 +37,10 @@ function agregarPlato(){
 }
 
 /*Buscar (filtrar) los platos vegetarianos del menu 36:40*/
-let vegetarianos = raices.filter(platos=>plato.esVegetariano == true)
-console.log(vegetarianos)
+function verVegetarianos(){
+    let vegetarianos = raices.filter(Platos=>Platos.esVegetariano == true)
+    console.table(vegetarianos)
+}
 
 
 /*Lista de mesas disponibles */
