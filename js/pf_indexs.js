@@ -24,19 +24,19 @@ const producto4 = new Platos("sorrentinos", 1500, 'calabaza, mozarella', true, f
 /*Agrego los platos al restaurante*/
 raices.push(producto1, producto2, producto3,producto4)
 
-/*Funcion para agregar los platos dinamicamente desde la pagina. Pide codigo del plato por parametro*/
+/*Funcion para agregar los platos dinamicamente desde la pagina. Pedir codigo de producto tambien*/
 function agregarPlato(){
     let nombreNuevo = prompt('Ingrese nombre del nuevo Plato');
     let precioNuevo = parseInt(prompt('Ingrese el precio: $'));
     let ingredientesNuevo = prompt('Ingrese los Ingredientes:');
-    let vegetarianoNuevo = prompt('Este plato es vegetariano?');
-    let veganoNuevo = prompt('Este platoe s vegano?');
+    let vegetarianoNuevo = confirm('Este plato es vegetariano?');
+    let veganoNuevo = confirm('Este platoe s vegano?');
     nuevoProd = new Platos(nombreNuevo,precioNuevo,ingredientesNuevo,vegetarianoNuevo,veganoNuevo)
-    raices.push(codigo)
-    console.log(raices)
+    raices.push(nuevoProd)
+    console.table(raices)
 }
 
-/*Buscar (filtrar) los platos vegetarianos del menu */
+/*Buscar (filtrar) los platos vegetarianos del menu 36:40*/
 let vegetarianos = raices.filter(platos=>plato.esVegetariano == true)
 console.log(vegetarianos)
 
@@ -52,7 +52,7 @@ function pedidoMesa1(){
         productos = productos.push(prompt('Ingresa un plato:'))
     }
     mesa1.push(productos)
+    console.table(mesa1)
 }
 
 
-//AFTER 2/09 > 20:12 QUE PONER EN EL PROYECTO FINAL
