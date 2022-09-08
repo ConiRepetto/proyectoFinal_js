@@ -27,17 +27,6 @@ h3 {
     justify-content: center;
 }
 
-#premiados{
-    padding: 10rem 0 3rem 0;
-}
-
-.premiados{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .img_proyectos{
     width: 40vw;
     height: auto;
@@ -51,6 +40,18 @@ h3 {
     border-radius: 0.5rem;
     }
 }
+
+#premiados{
+    padding: 10rem 0 3rem 0;
+}
+
+.premiados{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 
 .card_premiado{
     padding: 0.5rem 0 0 0;
