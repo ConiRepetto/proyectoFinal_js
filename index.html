@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sitio oficial de BEBAS Producciones Argentina">
-	<meta name="keyword" content="productora, argentina, videoclips, musica, diseño de imagen y sonido, Melanie Anton">
-    <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sitio oficial de BEBAS Producciones Argentina" />
+    <meta name="keyword"
+        content="productora, argentina, videoclips, musica, diseño de imagen y sonido, Melanie Anton" />
+    <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/png" />
     <script src="https://kit.fontawesome.com/db6eb9aea9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
-    <script src="js/pf_indexs.js"></script>
+    <link rel="stylesheet" href="./assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" />
+    <script src="js/pf_index.js"></script>
+    <script defer src="js/pf_dom.js"></script>
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/jquery.slim.min.js"></script>
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./assets/css/stylepack.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Neuton:wght@400;700;800&family=Playfair+Display:wght@712;900&family=Rozha+One&family=Volkhov&family=Work+Sans:wght@529&family=Berkshire+Swash&family=Yeseva+One&display=swap"/>
+    <link rel="stylesheet" href="./assets/css/stylepack.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Neuton:wght@400;700;800&family=Playfair+Display:wght@712;900&family=Rozha+One&family=Volkhov&family=Work+Sans:wght@529&family=Berkshire+Swash&family=Yeseva+One&display=swap" />
     <title>RestoNow</title>
 </head>
+
 <body>
-    <header> 
-        <a href="./index.html"><img src="./assets/img/bebas-logo-r.jpg" alt="BEBAS LOGO" class="navbar-brand"></a>
+    <header>
+        <a href="./index.html"><img src="./assets/img/bebas-logo-r.jpg" alt="BEBAS LOGO" class="navbar-brand" /></a>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
@@ -31,13 +37,20 @@
                             <a class="nav-link" aria-current="page" href="">Inicio</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Mis Mesas
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Mis Mesas
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="./assets/pages/proyectos.html#ultimos">Activas</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="./assets/pages/proyectos.html#premiados">Cerradas</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="./assets/pages/proyectos.html#ultimos">Activas</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./assets/pages/proyectos.html#premiados">Cerradas</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -47,23 +60,64 @@
                             <a class="nav-link" href="./assets/pages/contacto.html">Estadisticas</a>
                         </li>
                     </ul>
-                    <a id="nav__insta" href="https://instagram.com/bebas.tv?igshid=NDBlY2NjN2I=" target="_blank"><i class="fa-brands fa-instagram fa-3x"> </i> </a>
+                    <a id="nav__insta" href="https://instagram.com/bebas.tv?igshid=NDBlY2NjN2I=" target="_blank"><i
+                            class="fa-brands fa-instagram fa-3x"> </i>
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <div class="main__index">
-            <div>
-                <h1 id="index__title">RestoNow</h1>
+        <div>
+            <h1 id="title">RestoNow</h1>
+        </div>
+        <div>
+            <h2 class="subtitle">Listado de Restaurantes</h2>
+            <p id="parrafo">Restaurantes disponibles</p>
+            <p id="parrafoExtra">Restaurantes disponibles</p>
+
+            <div class="divTabla">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Restaurantes</th>
+                            <th scope="row">Mesas</th>
+                            <th scope="row">Mozos</th>
+                            <th scope="row">Horario</th>
+                            <th scope="row">Capacidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaB">
+                        <!-- <tr>
+                            <th scope="row">Mesas</th>
+                            <td class="mesas">12</td>
+                            <td class="mesas">20</td>
+                            <td class="mesas">25</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mozos</th>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Horario</th>
+                            <td>10 a 00</td>
+                            <td>10 a 23</td>
+                            <td>8 a 2</td>
+                        </tr> -->
+                    </tbody>
+                </table>
             </div>
-            
+        </div>
     </main>
-    <footer class="d-flex justify-content-sm-center justify-content-md-center justify-content-xl-center justify-content-lg-center">
-        <a href="./assets/pages/trabaja.html"> Trabaja con Nosotras </a>
-        <p> Copyright © </p>
+    <footer
+        class="d-flex justify-content-sm-center justify-content-md-center justify-content-xl-center justify-content-lg-center">
+        <p>Copyright ©</p>
         <a href="./assets/pages/contacto.html"> Contacto </a>
-        <a href="https://instagram.com/bebas.tv?igshid=NDBlY2NjN2I=" target="_blank"><i class="fa-brands fa-instagram fa-xl insta_white"></i></a>
+        <a href="https://instagram.com/bebas.tv?igshid=NDBlY2NjN2I=" target="_blank"><i
+                class="fa-brands fa-instagram fa-xl insta_white"></i></a>
     </footer>
 </body>
+
 </html>

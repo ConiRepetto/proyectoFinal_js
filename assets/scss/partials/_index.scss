@@ -1,60 +1,79 @@
-main{
+main {
     width: 100%;
-    
 
-    .div-p-secundario{
+    .div-p-secundario {
         display: flex;
         justify-content: right;
     }
-    .p-principal{
-        @include texto ($fuente-cuerpo, $large, 200px, center, $text-color-b);padding: 0em 1em 1.5em 0em;
+
+    .p-principal {
+        @include texto($fuente-cuerpo, $large, 200px, center, $text-color-b);
+        padding: 0em 1em 1.5em 0em;
     }
-    
+
+    .divTabla{
+        font-family: $fuente-menu;
+        font-size: $medium;
+        font-weight: 500;
+        text-align: left;
+        color: $text-color-b;
+        padding: 2em;
+    }
+
+    .mesas{
+        color:#008000;
+    }
+
+    .subtitle{
+        color: blue
+    }
+
     @media screen and (max-width: 600px) {
-        .p-principal{
+        .p-principal {
             font-size: $medium;
         }
-      }
-    
-      .p-secundario{
-        @include texto ($fuente-cuerpo, $medium, 0px, right, $resaltar-color);
+    }
+
+    .p-secundario {
+        @include texto($fuente-cuerpo, $medium, 0px, right, $resaltar-color);
         padding: 0.5em 1em 5em 0em;
     }
+
     @media screen and (max-width: 600px) {
-        .p-secundario{
+        .p-secundario {
             font-size: $small;
             text-align: center;
         }
-      }
-
-    
-    
-    @keyframes span_animation {
-        0% {color:#a156c4;}
-        25% {color:#ff7400;}
-        50% {color:#008000;}
-        75% {color:#f63737;}
-        100% {color:#a156c4;}
     }
-    
-    .section__span{
+
+    @keyframes span_animation {
+        0% {
+            color: #a156c4;
+        }
+
+        25% {
+            color: #ff7400;
+        }
+
+        50% {
+            color: #008000;
+        }
+
+        75% {
+            color: #f63737;
+        }
+
+        100% {
+            color: #a156c4;
+        }
+    }
+
+    .section__span {
         color: #a156c4;
         animation-name: span_animation;
-        animation-iteration-count: infinite ;
+        animation-iteration-count: infinite;
         animation-timing-function: linear;
         animation-duration: 4s;
         animation-delay: 1s;
     }
-    
 }
-
-
-
-
-
-
-/*@media only screen and (min-width: 601px) and (orientation: landscape) {
-    .main__section{
-        @include texto ($fuente-cuerpo, $large, 200, right, $text-color-b);
-    }
-  }*/
