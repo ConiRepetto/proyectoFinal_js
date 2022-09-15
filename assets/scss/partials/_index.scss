@@ -28,6 +28,35 @@ main {
         color: blue
     }
 
+    .btn{
+        @include texto($fuente-cuerpo, $medium, 0px, center, $text-color-b);
+    } 
+
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formElement{
+        padding: 1em;
+    }
+
+    .form-control{
+        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+        
+    }
+
+    .form-check-label{
+        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+        
+    }
+    .form-check-input{
+        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+    }
+    // .foco-select{
+
+    // }
+
     @media screen and (max-width: 600px) {
         .p-principal {
             font-size: $medium;

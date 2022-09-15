@@ -37,3 +37,16 @@ function crearElementoHTML(){
     tituloCreado.innerHTML = 'prueba de texto html desde JS'
     document.body.append(tituloCreado)
 }
+
+/*Buscar (filtrar) los resaturantes de la lista*/
+function buescarRestos(){
+    let busquedaResto = restaurantesActivos.filter(Restos => Restos.nombre == (value ="restoBuscado") )
+    onclick = alert()
+}
+
+let buttonBuscar = 
+document.getElementById('btn-outline-secondary')
+buttonBuscar.addEventListener('click', respuestaClick)
+function respuestaClick(){
+    console.log('Prueba Respuesta')
+}

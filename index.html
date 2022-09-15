@@ -11,8 +11,9 @@
     <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/png" />
     <script src="https://kit.fontawesome.com/db6eb9aea9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" />
-    <script src="js/pf_index.js"></script>
-    <script defer src="js/pf_dom.js"></script>
+    <script defer src="js/pf_index.js"></script>
+    <!-- <script defer src="js/pf_dom.js"></script>
+    <script defer src="js/pf_eventos.js"></script> -->
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/jquery.slim.min.js"></script>
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./assets/css/stylepack.css" />
@@ -72,42 +73,101 @@
             <h1 id="title">RestoNow</h1>
         </div>
         <div>
-            <h2 class="subtitle">Listado de Restaurantes</h2>
-            <p id="parrafo">Restaurantes disponibles</p>
-            <p id="parrafoExtra">Restaurantes disponibles</p>
-
+            <h2 class="subtitle">Menu Raices</h2>
+            <div class="col-4">
+                <div class="input-group">
+                    <input type="text" class="form-control " placeholder="Buscar Plato" aria-label="Buscar Resto"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="btnBuscarPlato"
+                        value="restoBuscado">Buscar</button>
+                </div>
+            </div>
             <div class="divTabla">
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">Restaurantes</th>
-                            <th scope="row">Mesas</th>
-                            <th scope="row">Mozos</th>
-                            <th scope="row">Horario</th>
-                            <th scope="row">Capacidad</th>
+                            <th scope="col">Nº</th>
+                            <th scope="row">Plato</th>
+                            <th scope="row">Ingredientes</th>
+                            <th scope="row">Vegetariano</th>
+                            <th scope="row">Vegano</th>
+                            <th scope="row">Precio</th>
+                            <th scope="row">Agregar</th>
                         </tr>
                     </thead>
                     <tbody id="tablaB">
                         <!-- <tr>
-                            <th scope="row">Mesas</th>
-                            <td class="mesas">12</td>
-                            <td class="mesas">20</td>
-                            <td class="mesas">25</td>
+                            <th scope="row">Nº</th>
+                            <td class="mesas">1</td>
+                            <td class="mesas">2</td>
+                            <td class="mesas">3</td>
                         </tr>
                         <tr>
-                            <th scope="row">Mozos</th>
-                            <td>3</td>
-                            <td>6</td>
-                            <td>8</td>
+                            <th scope="row">Plato</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
-                            <th scope="row">Horario</th>
-                            <td>10 a 00</td>
-                            <td>10 a 23</td>
-                            <td>8 a 2</td>
+                            <th scope="row">Ingredientes</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vegetariano</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Vegano</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Precio</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr> -->
                     </tbody>
                 </table>
+            </div>
+        </div>
+        <div>
+            <h2>Agregar Platos</h2>
+            <div class="fromularioPlatos col-6">
+                <form action="">
+                    <div class="formElement">
+                        <input type="number" class="form-control" min="1" id="inputNumero" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Numero del Plato" tabindex="1" value="">
+                    </div>
+                    <div class="formElement">
+                        <input type="text" class="form-control" id="inputNombre" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Nombre del Plato" tabindex="2" value="">
+                    </div>
+                    <div class="formElement">
+                        <input type="number" class="form-control" min="0" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Precio" id="inputPrecio" tabindex="3" value="">
+                    </div>
+                    <div class="formElement">
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Ingredientes" id="inputIngredientes" tabindex="4" value="">
+                    </div>
+                    <div class="formElement">
+                        <input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" id="inputVegetariano" 
+                            tabindex="5" value="">
+                        <label class="form-check-label" for="flexCheckChecked">Vegetariano</label>
+                        <input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" id="inputVegano" 
+                            tabindex="6" value="">
+                        <label class="form-check-label" for="flexCheckChecked">Vegano</label>
+
+                    </div>
+                    <button class="btn btn-outline-secondary btnAgregar" type="button" id="button-addon2" value="restoBuscado"
+                        tabindex="6">Agregar</button>
+                </form>
             </div>
         </div>
     </main>
@@ -115,8 +175,7 @@
         class="d-flex justify-content-sm-center justify-content-md-center justify-content-xl-center justify-content-lg-center">
         <p>Copyright ©</p>
         <a href="./assets/pages/contacto.html"> Contacto </a>
-        <a href="https://instagram.com/bebas.tv?igshid=NDBlY2NjN2I=" target="_blank"><i
-                class="fa-brands fa-instagram fa-xl insta_white"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-instagram fa-xl insta_white"></i></a>
     </footer>
 </body>
 
