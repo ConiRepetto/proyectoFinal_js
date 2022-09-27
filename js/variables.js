@@ -18,10 +18,4 @@ const datosUbicacion = [{tipo: 'CABA', factor: 1.10},
                         {tipo: 'GBA', factor: 1.30},
                         {tipo: 'Cordoba', factor: 1.20},]
 
-/* Cambiar valor de VEGETARIANO/VEGANO dependiendo si es true o false o sea si esta checked o no */
-let esVegetariano = 0
-vegetariano ? esVegetariano = 1.02 : esVegetariano = 1
-let esVegano = 0
-vegetariano ? esVegano = 1.04 : esVegano = 1
-
 const CostoBase = 5000
