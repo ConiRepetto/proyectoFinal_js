@@ -11,7 +11,7 @@ main {
         padding: 0em 1em 1.5em 0em;
     }
 
-    .divTabla{
+    .divTabla {
         font-family: $fuente-menu;
         font-size: $medium;
         font-weight: 500;
@@ -20,42 +20,192 @@ main {
         padding: 2em;
     }
 
-    .mesas{
-        color:#008000;
+    .mesas {
+        color: #008000;
     }
 
-    .subtitle{
-        color: blue
+    .subtitle {
+        color: blue;
     }
 
-    .btn{
+    .btn {
         @include texto($fuente-cuerpo, $medium, 0px, center, $text-color-b);
-    } 
+    }
 
-    form{
+    form {
         display: flex;
         flex-direction: column;
     }
 
-    .formElement{
+    .formElement {
         padding: 1em;
     }
 
-    .form-control{
+    .form-control {
         @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
-        
     }
 
-    .form-check-label{
-        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
-        
-    }
-    .form-check-input{
+    .form-check-label {
         @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
     }
-    // .foco-select{
 
-    // }
+    .form-check-input {
+        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+    }
+
+    label {
+        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+    }
+
+    #comensales {
+        font-size: 20px;
+    }
+
+.importe{
+    @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+}
+
+    .btnCotizar {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: 15px;
+        font-family: $fuente-cuerpo;
+    }
+
+    .btnCotizar.learn-more {
+        width: 15rem;
+        height: auto;
+    }
+
+    .btnCotizar.learn-more .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: #282936;
+        border-radius: 1.625rem;
+    }
+
+    .btnCotizar.learn-more .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+    }
+
+    .btnCotizar.learn-more .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+    }
+
+    .btnCotizar.learn-more .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+
+    .btnCotizar.learn-more .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: #282936;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .btnCotizar:hover .circle {
+        width: 100%;
+    }
+
+    .btnCotizar:hover .circle .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+    }
+
+    .btnCotizar:hover .button-text {
+        color: #fff;
+    }
+
+
+    .btnEnviar {
+        font-family: inherit;
+        font-size: 20px;
+        background: royalblue;
+        color: white;
+        padding: 0.7em 1em;
+        padding-left: 0.9em;
+        display: flex;
+        align-items: center;
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.2s;
+    }
+
+    .btnEnviar span {
+        display: block;
+        margin-left: 0.3em;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btnEnviar svg {
+        display: block;
+        transform-origin: center center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .btnEnviar:hover .svg-wrapper {
+        animation: fly-1 0.6s ease-in-out infinite alternate;
+    }
+
+    .btnEnviar:hover svg {
+        transform: translateX(1.2em) rotate(45deg) scale(1.1);
+    }
+
+    .btnEnviar:hover span {
+        transform: translateX(5em);
+    }
+
+    .btnEnviar:active {
+        transform: scale(0.95);
+    }
+
+    @keyframes fly-1 {
+        from {
+            transform: translateY(0.1em);
+        }
+
+        to {
+            transform: translateY(-0.1em);
+        }
+    }
 
     @media screen and (max-width: 600px) {
         .p-principal {

@@ -9,11 +9,11 @@
     <meta name="keyword"
         content="productora, argentina, videoclips, musica, diseño de imagen y sonido, Melanie Anton" />
     <link rel="shortcut icon" href="./assets/img/favicon-32x32.png" type="image/png" />
-    <script src="https://kit.fontawesome.com/db6eb9aea9.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/db6eb9aea9.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="./assets/bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css" />
-    <script defer src="js/pf_index.js"></script>
-    <!-- <script defer src="js/pf_dom.js"></script>
-    <script defer src="js/pf_eventos.js"></script> -->
+    <script src="js/class.cotizador.js"></script>
+    <script defer src="js/variables.js"></script>
+    <script defer src="js/app.js"></script>
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/jquery.slim.min.js"></script>
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./assets/css/stylepack.css" />
@@ -44,7 +44,7 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                 <li>
-                                    <a class="dropdown-item" href="./assets/pages/proyectos.html#ultimos">Activas</a>
+                                    <a class="dropdown-item" href="">Activas</a>
                                 </li>
                                 <li>
                                     <hr class="dropdown-divider" />
@@ -58,7 +58,7 @@
                             <a class="nav-link" href="./assets/pages/prensa.html">Cocina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./assets/pages/contacto.html">Estadisticas</a>
+                            <a class="nav-link" href="./assets/pages/agregar_plato.html">Agregar Platos</a>
                         </li>
                     </ul>
                     <a id="nav__insta" href="https://instagram.com/bebas.tv?igshid=NDBlY2NjN2I=" target="_blank"><i
@@ -70,105 +70,59 @@
     </header>
     <main>
         <div>
-            <h1 id="title">RestoNow</h1>
+            <h1 id="title">In House Resto</h1>
         </div>
-        <div>
-            <h2 class="subtitle">Menu Raices</h2>
-            <div class="col-4">
-                <div class="input-group">
-                    <input type="text" class="form-control " placeholder="Buscar Plato" aria-label="Buscar Resto"
-                        aria-describedby="button-addon2" id="inputBuscarPlato">
-                    <button class="btn btn-outline-secondary" type="button" id="btnBuscarPlato"
-                        value="restoBuscado">Buscar</button>
-                </div>
-            </div>
-            <div class="divTabla">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nº</th>
-                            <th scope="row">Plato</th>
-                            <th scope="row">Ingredientes</th>
-                            <th scope="row">Vegetariano</th>
-                            <th scope="row">Vegano</th>
-                            <th scope="row">Precio</th>
-                            <th scope="row">Agregar</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tablaB">
-                        <!-- <tr>
-                            <th scope="row">Nº</th>
-                            <td class="mesas">1</td>
-                            <td class="mesas">2</td>
-                            <td class="mesas">3</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Plato</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Ingredientes</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Vegetariano</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Vegano</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Precio</th>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr> -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div>
-            <h2>Agregar Platos</h2>
-            <div class="fromularioPlatos col-6">
-                <form action="">
-                    <div class="formElement">
-                        <input type="number" class="form-control" min="1" id="inputNumero" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" placeholder="Numero del Plato" tabindex="1" value="">
-                    </div>
-                    <div class="formElement">
-                        <input type="text" class="form-control" id="inputNombre" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" placeholder="Nombre del Plato" tabindex="2" value="">
-                    </div>
-                    <div class="formElement">
-                        <input type="number" class="form-control" min="0" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" placeholder="Precio" id="inputPrecio" tabindex="3" value="">
-                    </div>
-                    <div class="formElement">
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" placeholder="Ingredientes" id="inputIngredientes" tabindex="4" value="">
-                    </div>
-                    <div class="formElement">
-                        <input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" id="inputVegetariano" 
-                            tabindex="5" value="">
-                        <label class="form-check-label" for="flexCheckChecked">Vegetariano</label>
-                        <input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" id="inputVegano" 
-                            tabindex="6" value="">
-                        <label class="form-check-label" for="flexCheckChecked">Vegano</label>
+        <form action="">
+            <div class="div-cotizador">
+                <h2 class="center separador">Completa con los datos de tu evento:</h2>
+                <label for="comida">Selecciona que comida del dia queres:</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="comida"
+                    tabindex="1">
+                    <option selected disabled>...</option>
 
-                    </div>
-                    <button class="btnAgregar btn btn-outline-secondary " type="button" id="button-addon2" value="restoBuscado"
-                        tabindex="6">Agregar</button>
-                </form>
-            </div>
+                </select>
+                <label for="ubicacion">Selecciona la ubicación del evento:</label>
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="ubicacion"
+                    tabindex="2">
+                    <option selected disabled>...</option>
+                </select>
+                <label for="comensales">Ingresa la cantidad de comensales (+18 años):</label>
+                <input type="number" id="comensales" tabindex="3" min="2" max="30">
+
+                <div class="formElement">
+                    <input class="form-check-input inputVegetariano" type="checkbox" id="flexCheckDefault" tabindex="5">
+                    <label class="form-check-label" for="flexCheckChecked">Vegetariano</label>
+
+                    <input class="form-check-input inputVegano" type="checkbox" id="flexCheckDefault" tabindex="6">
+                    <label class="form-check-label" for="flexCheckChecked">Vegano</label>
+                </div>
+                <div class="center separador">
+                    <button class="learn-more button-outline btnCotizar">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Presupuesto</span>
+                    </button>
+                </div>
+                <div class="center separador">
+                    <p class="importe ocultar">Presupuesto del Servicio: $ <span>0.00</span> </p>
+                </div>
+                <div>
+                    <button class="btnEnviar ocultar">
+                        <div class="svg-wrapper-1">
+                            <div class="svg-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <span>Enviar</span>
+                    </button>
+                </div>
+        </form>
         </div>
     </main>
     <footer
