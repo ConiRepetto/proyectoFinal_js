@@ -2,8 +2,8 @@
 const comida = document.querySelector("#comida")
 const ubicacion = document.querySelector("#ubicacion")
 const comensales = document.querySelector("#comensales")
-const vegetariano = document.querySelector(".inputVegetariano")
-const vegano = document.querySelector(".inputVegano")
+const vegetariano = document.querySelector(".inputVegetariano").checked //devuelve true/false
+const vegano = document.querySelector(".inputVegano").checked
 const btnCotizar = document.querySelector(".btnCotizar")
 const importe = document.querySelector(".importe")
 const btnEnviar = document.querySelector(".btnEnviar")

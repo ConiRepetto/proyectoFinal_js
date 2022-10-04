@@ -20,22 +20,68 @@ const datosCompletos = () => {
     }
 }
 
+const alertaGenerico = (icono, texto) => {
+    Swal.fire({
+        icon: icono,
+        title: texto,
+    })
+}
+
+const emailAlert = () => {
+
+    Swal.fire({
+    title: 'Ingresa tu email',
+    input: 'email',
+    inputPlaceholder: 'ejemplo@tumail.com.ar',
+    inputLabel: 'Aqui te enviaremos tu cotizcion',
+    inputAttributes: {
+        autocapitalize: 'off'
+    },
+    showCancelButton: true,
+    confirmButtonText: 'Enviar',
+    showLoaderOnConfirm: true,
+}).then((result) => {
+    if (result.isConfirmed) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Cotizacion Enviada!',
+            text: 'Muchas gracias por elegirnos!',
+        })
+    }
+})
+
+
+    if (email) {
+        Swal.fire(`Entered email: ${email}`)
+    }
+}
+
+const errorInputAlert = () => {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Primero completa todos los datos solicitados',
+    })
+}
+
 /*toma todos los datos que se pasan por HTML y crea un nuevo objeto*/
-const realizarCotizacion = () => {
+const realizarCotizacion = (e) => {
+    e.preventDefault()
     //debugger
     if (datosCompletos()) {
-        const presupuesto = new Cotizador(comida.value, ubicacion.value, comensales.value, /*vegetariano, vegano, */ CostoBase)
-        //presupuesto.esVegetariano()
-        //presupuesto.esVegano()
+        const presupuesto = new Cotizador(comida.value, ubicacion.value, comensales.value, vegetariano, vegano, CostoBase)
+        presupuesto.esVegetariano()
+        presupuesto.esVegano()
         importe.innerText = presupuesto.cotizar() //llama al metodo cotizar dentro del objeto presupuesto recien creado
     } else {
-        alert("⛔ Completa todos los datos solicitados.")
+        errorInputAlert()
     }
 }
 
 /* Toma los datos guardados en los elementos HTML select/ input y crea un nuevo objeto que se guarda en LOCAL STORAGE */
-const enviarPorEmail = () => {
-    debugger
+const enviarPorEmail = (e) => {
+    e.preventDefault()
+    //debugger
     if (datosCompletos()) {
         const cotizacion = {
             fechaCotizacion: new Date().toLocaleString(),
@@ -45,13 +91,16 @@ const enviarPorEmail = () => {
             costoServicio: importe.innerText
         }
         localStorage.setItem("UltimaCotizacion", JSON.stringify(cotizacion))
-        alert("✅ Cotización enviada. ¡Muchas gracias por elegirnos!")
+        emailAlert()
+        enviadoAlert()
     } else {
-        alert("Primero completa todos los datos solicitados.") //si no se completaron los datos no corre el codigo
+        errorInputAlert() //si no se completaron los datos no corre el codigo
     }
 
     btnEnviar.classList.add("ocultar")
 }
+
+
 
 /* llamo a las funciones anteriores con los botones del HTML */
 btnCotizar.addEventListener("click", realizarCotizacion)
