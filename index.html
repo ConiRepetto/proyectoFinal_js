@@ -14,6 +14,8 @@
     <script src="js/class.cotizador.js"></script>
     <script defer src="js/variables.js"></script>
     <script defer src="js/funciones.js"></script>
+    <script defer src="js/plantilla_card.js"></script>
+    <script defer src="js/app_comprar.js"></script>
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/jquery.slim.min.js"></script>
     <script src="./assets/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/sweetalert2/dist/sweetalert2.all.min.js"></script>
@@ -60,11 +62,10 @@
                             <a class="nav-link" href="./assets/pages/prensa.html">Cocina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./assets/pages/agregar_plato.html">Agregar Platos</a>
+                            <a class="nav-link" href="./assets/pages/menu_compras.html">Agregar Platos</a>
                         </li>
                     </ul>
-                    <a id="nav__insta" href="https://instagram.com/bebas.tv?igshid=NDBlY2NjN2I=" target="_blank"><i
-                            class="fa-brands fa-instagram fa-3x"> </i>
+                    <a id="nav__insta" href="" target="_blank"><i class="fa-brands fa-instagram fa-3x"> </i>
                     </a>
                 </div>
             </div>
@@ -75,54 +76,57 @@
             <h1 id="title">In House Resto</h1>
         </div>
         <form action="">
-            <div class="div-cotizador">
-                <h2 class="center separador">Completa con los datos de tu evento:</h2>
-                <label for="comida">Selecciona que comida del dia queres:</label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="comida"
-                    tabindex="1">
-                    <option selected disabled>...</option>
+            <div class="containerCotizador">
+                <div class="div-cotizador col-lg-7">
+                    <h2 class="center separador">Completa con los datos de tu evento:</h2>
+                    <label for="comida">Selecciona que comida del dia queres:</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="comida"
+                        tabindex="1">
+                        <option selected disabled>...</option>
 
-                </select>
-                <label for="ubicacion">Selecciona la ubicación del evento:</label>
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="ubicacion"
-                    tabindex="2">
-                    <option selected disabled>...</option>
-                </select>
-                <label for="comensales">Ingresa la cantidad de comensales (+18 años):</label>
-                <input type="number" id="comensales" tabindex="3" min="2" max="30">
+                    </select>
+                    <label for="ubicacion">Selecciona la ubicación del evento:</label>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="ubicacion"
+                        tabindex="2">
+                        <option selected disabled>...</option>
+                    </select>
+                    <label for="comensales">Ingresa la cantidad de comensales (+18 años):</label>
+                    <input type="number" id="comensales" tabindex="3" min="2" max="30">
 
-                <div class="formElement">
-                    <input class="form-check-input inputVegetariano" type="checkbox" id="flexCheckDefault" tabindex="5">
-                    <label class="form-check-label" for="flexCheckChecked">Vegetariano</label>
+                    <div class="formElement">
+                        <input class="form-check-input inputVegetariano" type="checkbox" id="flexCheckDefault"
+                            tabindex="5">
+                        <label class="form-check-label" for="flexCheckChecked">Vegetariano</label>
 
-                    <input class="form-check-input inputVegano" type="checkbox" id="flexCheckDefault" tabindex="6">
-                    <label class="form-check-label" for="flexCheckChecked">Vegano</label>
-                </div>
-                <div class="center separador">
-                    <button class="learn-more button-outline btnCotizar">
-                        <span class="circle" aria-hidden="true">
-                            <span class="icon arrow"></span>
-                        </span>
-                        <span class="button-text">Presupuesto</span>
-                    </button>
-                </div>
-                <div class="center separador">
-                    <p class="importe ocultar">Presupuesto del Servicio: $ <span>0.00</span> </p>
-                </div>
-                <div>
-                    <button class="btnEnviar ocultar">
-                        <div class="svg-wrapper-1">
-                            <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor"
-                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
-                                    </path>
-                                </svg>
+                        <input class="form-check-input inputVegano" type="checkbox" id="flexCheckDefault" tabindex="6">
+                        <label class="form-check-label" for="flexCheckChecked">Vegano</label>
+                    </div>
+                    <div class="center separador">
+                        <button class="learn-more button-outline btnCotizar">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">Presupuesto</span>
+                        </button>
+                    </div>
+                    <div class="center separador">
+                        <p class="importe ocultar">Presupuesto del Servicio: $ <span>0.00</span> </p>
+                    </div>
+                    <div>
+                        <button class="btnEnviar ocultar">
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                                        </path>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
-                        <span>Enviar</span>
-                    </button>
+                            <span>Enviar</span>
+                        </button>
+                    </div>
                 </div>
         </form>
         </div>

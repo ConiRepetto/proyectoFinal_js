@@ -1,6 +1,10 @@
 main {
     width: 100%;
-
+    .containerCotizador{
+        display: flex;
+        padding: 0rem;
+        justify-content: center;
+    }
     .div-p-secundario {
         display: flex;
         justify-content: right;

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "nombre": "Hamburguesas", 
+        "ingredientes": "pan, carne, chedar, ketchup", 
+        "categoria": "entrada", 
+        "imagen": "https://www.clarin.com/img/2022/05/27/la-hamburguesa-mucho-mas-que___0HXb0UR0v_2000x1500__1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "bruschetas", 
+        "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
+        "categoria": "entrada", 
+        "imagen": "https://recetinas.com/wp-content/uploads/2019/10/bruschetta-italiana.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "bruschetas", 
+        "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
+        "categoria": "entrada", 
+        "imagen": "https://recetinas.com/wp-content/uploads/2019/10/bruschetta-italiana.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "bruschetas", 
+        "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
+        "categoria": "entrada", 
+        "imagen": "xxxxx"
+    },
+    {
+        "id": 5,
+        "nombre": "bruschetas", 
+        "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
+        "categoria": "entrada", 
+        "imagen": "xxxxx"
+    },
+    {
+        "id": 6,
+        "nombre": "bruschetas", 
+        "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
+        "categoria": "entrada", 
+        "imagen": "xxxxx"
+    }
+]

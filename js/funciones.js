@@ -49,8 +49,6 @@ const emailAlert = () => {
         })
     }
 })
-
-
     if (email) {
         Swal.fire(`Entered email: ${email}`)
     }
@@ -72,7 +70,7 @@ const realizarCotizacion = (e) => {
         const presupuesto = new Cotizador(comida.value, ubicacion.value, comensales.value, vegetariano, vegano, CostoBase)
         presupuesto.esVegetariano()
         presupuesto.esVegano()
-        importe.innerText = presupuesto.cotizar() //llama al metodo cotizar dentro del objeto presupuesto recien creado
+        importe.innerText = `$ ${presupuesto.cotizar()}` //llama al metodo cotizar dentro del objeto presupuesto recien creado
     } else {
         errorInputAlert()
     }
