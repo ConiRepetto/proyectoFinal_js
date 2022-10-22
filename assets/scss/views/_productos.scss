@@ -1,3 +1,8 @@
+div h3{
+    @include texto($fuente-cuerpo, $large, 0px, center, $text-color-b);
+    padding: 2em;
+}
+
 .productos_section{
     display: flex;
     justify-content: center;
@@ -7,12 +12,22 @@
 .containerCompras{
     display: flex;
     flex-direction: row;
-    padding: 5rem;
-    justify-content: space-around;
+    padding: 0rem 12rem 12rem 12rem;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: stretch;
+    justify-items: stretch;
 }
 
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-items: stretch;
+}
 .card{
     padding: 1rem;
     background-color: rgba( 255, 255, 255, 0.15 );

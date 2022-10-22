@@ -71,6 +71,8 @@ const realizarCotizacion = (e) => {
         presupuesto.esVegetariano()
         presupuesto.esVegano()
         importe.innerText = `$ ${presupuesto.cotizar()}` //llama al metodo cotizar dentro del objeto presupuesto recien creado
+        btnEnviar.classList.remove("ocultar")
+        importe.classList.remove("ocultar")
     } else {
         errorInputAlert()
     }
@@ -95,7 +97,7 @@ const enviarPorEmail = (e) => {
         errorInputAlert() //si no se completaron los datos no corre el codigo
     }
 
-    btnEnviar.classList.add("ocultar")
+    btnEnviar.classList.remove("ocultar")
 }
 
 

@@ -1,262 +1,210 @@
 main {
-    width: 100%;
-    .containerCotizador{
-        display: flex;
-        padding: 0rem;
-        justify-content: center;
-    }
-    .div-p-secundario {
-        display: flex;
-        justify-content: right;
-    }
+  width: 100%;
+  .containerCotizador {
+    display: flex;
+    padding: 0rem;
+    justify-content: center;
+  }
+  .div-p-secundario {
+    display: flex;
+    justify-content: right;
+  }
 
-    .p-principal {
-        @include texto($fuente-cuerpo, $large, 200px, center, $text-color-b);
-        padding: 0em 1em 1.5em 0em;
-    }
+  .p-principal {
+    @include texto($fuente-cuerpo, $large, 200px, center, $text-color-b);
+    padding: 0em 1em 1.5em 0em;
+  }
 
-    .divTabla {
-        font-family: $fuente-menu;
-        font-size: $medium;
-        font-weight: 500;
-        text-align: left;
-        color: $text-color-b;
-        padding: 2em;
-    }
+  .divTabla {
+    font-family: $fuente-menu;
+    font-size: $medium;
+    font-weight: 500;
+    text-align: left;
+    color: $text-color-b;
+    padding: 2em;
+  }
 
-    .mesas {
-        color: #008000;
-    }
+  .mesas {
+    color: #008000;
+  }
 
-    .subtitle {
-        color: blue;
-    }
+  .subtitle {
+    color: blue;
+  }
 
-    .btn {
-        @include texto($fuente-cuerpo, $medium, 0px, center, $text-color-b);
-    }
+  .btn {
+    @include texto($fuente-cuerpo, $medium, 0px, center, $text-color-b);
+  }
 
-    form {
-        display: flex;
-        flex-direction: column;
-    }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .formElement {
-        padding: 1em;
-    }
+  .formElement {
+    padding: 1em;
+  }
 
-    .form-control {
-        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
-    }
-
-    .form-check-label {
-        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
-    }
-
-    .form-check-input {
-        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
-    }
-
-    label {
-        @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
-    }
-
-    #comensales {
-        font-size: 20px;
-    }
-
-.importe{
+  .form-control {
     @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+  }
+
+  .form-check-label {
+    @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+  }
+  select{
+    font-family: $fuente-cuerpo;
+    font-size: $medium;
+  }
+  select option{
+    font-family: $fuente-cuerpo;
+    font-size: $small;
+  }
+
+  .form-check-input {
+    @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+  }
+
+  label {
+    @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+  }
+
+  #comensales {
+    font-size: 20px;
+  }
+
+  .importe {
+    @include texto($fuente-cuerpo, $medium, 0px, left, $text-color-b);
+  }
+  .importeD{
+    display: flex;
+    justify-content: center;
+  }
+
+  //Boton crear cotizacion
+  .css-button-sliding-to-left--sky {
+    min-width: 130px;
+    height: auto;
+    color: #fff;
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    font-family: $fuente-cuerpo;
+    font-size: $medium;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 15px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 3px solid $principal;
+    color: $principal;
+  }
+  .css-button-sliding-to-left--sky:hover {
+    color: #fff;
+  }
+  .css-button-sliding-to-left--sky:hover:after {
+    width: 100%;
+  }
+  .css-button-sliding-to-left--sky:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: $principal;
+  }
+  
+  //OCULTAR
+  .ocultar{
+    visibility: hidden;
+  }
+  
+.botones-index{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-    .btnCotizar {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        outline: none;
-        border: 0;
-        vertical-align: middle;
-        text-decoration: none;
-        background: transparent;
-        padding: 0;
-        font-size: 15px;
-        font-family: $fuente-cuerpo;
+.botones-index .padding{
+    padding: 2em;
+}
+
+  //Boton Enviar Cotizacion
+  .btnEnviar {
+    font-family: $fuente-cuerpo;
+    font-size: $medium;
+    background: royalblue;
+    color: white;
+    padding: 0.1em 0.5em 0.1em 0.1em;
+    padding-left: 0.5em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.2s;
+  }
+
+  .btnEnviar span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btnEnviar svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .btnEnviar:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+
+  .btnEnviar:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+
+  .btnEnviar:hover span {
+    transform: translateX(5em);
+  }
+
+  .btnEnviar:active {
+    transform: scale(0.95);
+  }
+
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
     }
 
-    .btnCotizar.learn-more {
-        width: 15rem;
-        height: auto;
+    to {
+      transform: translateY(-0.1em);
     }
+  }
 
-    .btnCotizar.learn-more .circle {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: relative;
-        display: block;
-        margin: 0;
-        width: 3rem;
-        height: 3rem;
-        background: #282936;
-        border-radius: 1.625rem;
+  @media screen and (max-width: 600px) {
+    .p-principal {
+      font-size: $medium;
     }
+  }
 
-    .btnCotizar.learn-more .circle .icon {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        background: #fff;
-    }
+  .p-secundario {
+    @include texto($fuente-cuerpo, $medium, 0px, right, $resaltar-color);
+    padding: 0.5em 1em 4em 0em;
+  }
 
-    .btnCotizar.learn-more .circle .icon.arrow {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        left: 0.625rem;
-        width: 1.125rem;
-        height: 0.125rem;
-        background: none;
-    }
-
-    .btnCotizar.learn-more .circle .icon.arrow::before {
-        position: absolute;
-        content: "";
-        top: -0.29rem;
-        right: 0.0625rem;
-        width: 0.625rem;
-        height: 0.625rem;
-        border-top: 0.125rem solid #fff;
-        border-right: 0.125rem solid #fff;
-        transform: rotate(45deg);
-    }
-
-    .btnCotizar.learn-more .button-text {
-        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: 0.75rem 0;
-        margin: 0 0 0 1.85rem;
-        color: #282936;
-        font-weight: 700;
-        line-height: 1.6;
-        text-align: center;
-        text-transform: uppercase;
-    }
-
-    .btnCotizar:hover .circle {
-        width: 100%;
-    }
-
-    .btnCotizar:hover .circle .icon.arrow {
-        background: #fff;
-        transform: translate(1rem, 0);
-    }
-
-    .btnCotizar:hover .button-text {
-        color: #fff;
-    }
-
-
-    .btnEnviar {
-        font-family: inherit;
-        font-size: 20px;
-        background: royalblue;
-        color: white;
-        padding: 0.7em 1em;
-        padding-left: 0.9em;
-        display: flex;
-        align-items: center;
-        border: none;
-        border-radius: 16px;
-        overflow: hidden;
-        transition: all 0.2s;
-    }
-
-    .btnEnviar span {
-        display: block;
-        margin-left: 0.3em;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .btnEnviar svg {
-        display: block;
-        transform-origin: center center;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .btnEnviar:hover .svg-wrapper {
-        animation: fly-1 0.6s ease-in-out infinite alternate;
-    }
-
-    .btnEnviar:hover svg {
-        transform: translateX(1.2em) rotate(45deg) scale(1.1);
-    }
-
-    .btnEnviar:hover span {
-        transform: translateX(5em);
-    }
-
-    .btnEnviar:active {
-        transform: scale(0.95);
-    }
-
-    @keyframes fly-1 {
-        from {
-            transform: translateY(0.1em);
-        }
-
-        to {
-            transform: translateY(-0.1em);
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .p-principal {
-            font-size: $medium;
-        }
-    }
-
+  @media screen and (max-width: 600px) {
     .p-secundario {
-        @include texto($fuente-cuerpo, $medium, 0px, right, $resaltar-color);
-        padding: 0.5em 1em 5em 0em;
+      font-size: $small;
+      text-align: center;
     }
-
-    @media screen and (max-width: 600px) {
-        .p-secundario {
-            font-size: $small;
-            text-align: center;
-        }
-    }
-
-    @keyframes span_animation {
-        0% {
-            color: #a156c4;
-        }
-
-        25% {
-            color: #ff7400;
-        }
-
-        50% {
-            color: #008000;
-        }
-
-        75% {
-            color: #f63737;
-        }
-
-        100% {
-            color: #a156c4;
-        }
-    }
-
-    .section__span {
-        color: #a156c4;
-        animation-name: span_animation;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-duration: 4s;
-        animation-delay: 1s;
-    }
+  }
 }
+

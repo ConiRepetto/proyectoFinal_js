@@ -25,20 +25,20 @@
         "nombre": "bruschetas", 
         "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
         "categoria": "entrada", 
-        "imagen": "xxxxx"
+        "imagen": "https://recetinas.com/wp-content/uploads/2019/10/bruschetta-italiana.jpg"
     },
     {
         "id": 5,
         "nombre": "bruschetas", 
         "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
         "categoria": "entrada", 
-        "imagen": "xxxxx"
+        "imagen": "https://recetinas.com/wp-content/uploads/2019/10/bruschetta-italiana.jpg"
     },
     {
         "id": 6,
         "nombre": "bruschetas", 
         "ingredientes": "tostada, tomate, albahaca, jamon crudo", 
         "categoria": "entrada", 
-        "imagen": "xxxxx"
+        "imagen": "https://recetinas.com/wp-content/uploads/2019/10/bruschetta-italiana.jpg"
     }
 ]
